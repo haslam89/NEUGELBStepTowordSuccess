@@ -1,4 +1,4 @@
-#  Movie Zone(App Name) SwiftUI/Swift iOS Test Assignment
+#  Movie Zone (SwiftUI/Swift) iOS Test Assignment
 
 A SwiftUI-based iOS application to browse movies using The Movie Database (TMDb) API, featuring search, sorting, infinite scrolling, dark theme compatibility and cached image loading. Built with modern Swift concurrency and clean MVVM architecture.
 
@@ -6,7 +6,7 @@ A SwiftUI-based iOS application to browse movies using The Movie Database (TMDb)
 
 # Features
 
-    •    Browse popular and recent movies.
+    •    Browse recent movies by default (Release date).
     •    Infinite scrolling with automatic pagination.
     •    Search movies with suggestions dropdown.
     •    Sort movies by:
@@ -29,11 +29,11 @@ A SwiftUI-based iOS application to browse movies using The Movie Database (TMDb)
 
 # Architecture
     •    MVVM (Model-View-ViewModel) // we can also use MVVM-C 
-    
     •    SwiftUI for declarative UI
     •    Combine for reactive state management (@Published)
     •    Async/Await for network calls
     •    Kingfisher (via Swift Package Manager) for cached image loading // For image loading , we can use SDWebImage or we can design out own
+    •    Implemented protocol oriented design pattern to create obstrection between network layer
     
 # Application Folder Structure
 
