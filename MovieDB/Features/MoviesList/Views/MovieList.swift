@@ -20,7 +20,7 @@ struct MovieList: View {
                     NoMovieDataView(isEmpty: true, emptyMessage: "No movies found")
                     if !searchQuery.isEmpty {
                         LoadAllMoviesButton {
-                            onLoadAllPressed() // Or call your function to load all movies
+                            onLoadAllPressed()
                     }
                     }
                 }

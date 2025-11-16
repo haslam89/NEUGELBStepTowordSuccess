@@ -46,19 +46,26 @@ struct MoreAboutComponent: View {
                 HStack {
                     Image(systemName: "play.fill")
                     Text(videoAvailable ? "Watch Trailer" : "Trailer not available")
+                        .fontWeight(.semibold)
                 }
-                .foregroundColor(.primary)
+                .foregroundColor(.white)
                 .frame(maxWidth: .infinity, minHeight: 60)
                 .background(
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(videoAvailable ? Color.clear : Color.gray.opacity(0.2))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.primary, lineWidth: 1)
-                        )
+                    Group {
+                        if videoAvailable {
+                            LinearGradient(
+                                colors: [Color.red, Color.red.opacity(0.7)],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        } else {
+                            Color.gray.opacity(0.2)
+                        }
+                    }
+                    .cornerRadius(8)
                 )
             }
-            .disabled(!videoAvailable)
+            .disabled(!videoAvailable) 
         }
         .padding()
         .background(

@@ -26,6 +26,7 @@ final class MoviesListViewModel: ObservableObject {
     private var totalPages = 1
     private var isFetching = false
     
+    // Init with Dependency Injection
     init(movieService: MovieServiceProtocol) {
         self.movieService = movieService
     }

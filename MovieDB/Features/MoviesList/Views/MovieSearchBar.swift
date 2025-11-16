@@ -36,9 +36,9 @@ struct MovieSearchBar: View {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.gray)
                         .padding(.trailing, 5)
-                        .contentShape(Rectangle()) // ← ensures full tappable area
+                        .contentShape(Rectangle())
                 }
-                .buttonStyle(PlainButtonStyle())   // ← prevents long press animation
+                .buttonStyle(PlainButtonStyle())  
             }
         }
         .frame(height: 48)
