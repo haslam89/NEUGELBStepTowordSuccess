@@ -14,6 +14,10 @@ struct MoviesListMainView: View {
     @State private var searchCancellable: AnyCancellable?
     @FocusState private var isSearchFocused: Bool
     
+    init(viewModel: MoviesListViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+
     var body: some View {
         NavigationView {
             VStack {
