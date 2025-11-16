@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FBAA028B2EC785C600FBCB58 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBAA028A2EC785C600FBCB58 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FBF042532EC5E4D70081EFD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,32 @@
 		FBF0425C2EC5E4D70081EFD7 /* MovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FBF044352EC5F2ED0081EFD7 /* Exceptions for "MovieDB" folder in "MovieDBTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Networking/MockData/MoviesDetails.json,
+				Networking/MockData/MoviesList.json,
+			);
+			target = FBF042512EC5E4D70081EFD7 /* MovieDBTests */;
+		};
+		FBF044362EC5F2ED0081EFD7 /* Exceptions for "MovieDB" folder in "MovieDBUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Networking/MockData/MoviesDetails.json,
+				Networking/MockData/MoviesList.json,
+			);
+			target = FBF0425B2EC5E4D70081EFD7 /* MovieDBUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FBF042472EC5E4D60081EFD7 /* MovieDB */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FBF044352EC5F2ED0081EFD7 /* Exceptions for "MovieDB" folder in "MovieDBTests" target */,
+				FBF044362EC5F2ED0081EFD7 /* Exceptions for "MovieDB" folder in "MovieDBUITests" target */,
+			);
 			path = MovieDB;
 			sourceTree = "<group>";
 		};
@@ -52,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBAA028B2EC785C600FBCB58 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +140,7 @@
 			);
 			name = MovieDB;
 			packageProductDependencies = (
+				FBAA028A2EC785C600FBCB58 /* Kingfisher */,
 			);
 			productName = MovieDB;
 			productReference = FBF042452EC5E4D60081EFD7 /* MovieDB.app */;
@@ -195,6 +224,9 @@
 			);
 			mainGroup = FBF0423C2EC5E4D60081EFD7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FBAA02332EC784B300FBCB58 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FBF042462EC5E4D60081EFD7 /* Products */;
 			projectDirPath = "";
@@ -400,17 +432,18 @@
 				DEVELOPMENT_TEAM = 2U24J4Z466;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MovieZone;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.karwatechnologies.Rahal-Passenger.MovieDB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.organization.MovieZone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -432,17 +465,18 @@
 				DEVELOPMENT_TEAM = 2U24J4Z466;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MovieZone;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.karwatechnologies.Rahal-Passenger.MovieDB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.organization.MovieZone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -578,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBAA02332EC784B300FBCB58 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBAA028A2EC785C600FBCB58 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBAA02332EC784B300FBCB58 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FBF0423D2EC5E4D60081EFD7 /* Project object */;
 }
