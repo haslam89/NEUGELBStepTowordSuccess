@@ -28,10 +28,14 @@ struct MovieList: View {
             }
 
             LazyVStack {
-                ForEach(movies) { movie in
-                    MovieRowView(movie: movie)
-                        .onTapGesture { onMovieTap(movie) }
-                        .onAppear { onLastMovieAppear(movie) }
+                ForEach(movies, id: \.id) { movie in
+                    Button {
+                        onMovieTap(movie)
+                    } label: {
+                        MovieRowView(movie: movie)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .onAppear { onLastMovieAppear(movie) }
                 }
             }
         }.scrollIndicators(.hidden)

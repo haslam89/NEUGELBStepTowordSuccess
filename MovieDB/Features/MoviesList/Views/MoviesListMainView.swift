@@ -41,10 +41,9 @@ struct MoviesListMainView: View {
                     showEmptyState: viewModel.showEmptyState,
                     searchQuery: viewModel.searchQuery,
                     loadAllAction: { viewModel.searchQuery = "" },
-                    onMovieTap: {
-                        
+                    onMovieTap: { movie in
                         isSearchFocused = false
-                        showMovieDetails = $0
+                        showMovieDetails = movie
                     },
                     onLastMovieAppear: { movie in
                         if viewModel.isLastMovie(movie){
@@ -65,7 +64,9 @@ struct MoviesListMainView: View {
             .toolbar { sortingMenu }
             .fullScreenCover(item: $showMovieDetails) { movie in
                 let detailsVM = MovieDetailsViewModel(movieID: movie.id, service: MovieServiceManager())
-                NavigationView { MovieDetailsView(viewModel: detailsVM) }
+                NavigationView { MovieDetailsView(viewModel: detailsVM).onDisappear {
+                    showMovieDetails = nil
+                } }
             }
             .alert("Error", isPresented: $showAlert) {
                 Button("OK", role: .cancel) { showAlert = false }
