@@ -30,11 +30,15 @@ struct MovieSearchBar: View {
                 }
             
             if !text.isEmpty {
-                Button { text = "" } label: {
+                Button {
+                    text = ""
+                } label: {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.gray)
                         .padding(.trailing, 5)
+                        .contentShape(Rectangle()) // ← ensures full tappable area
                 }
+                .buttonStyle(PlainButtonStyle())   // ← prevents long press animation
             }
         }
         .frame(height: 48)
