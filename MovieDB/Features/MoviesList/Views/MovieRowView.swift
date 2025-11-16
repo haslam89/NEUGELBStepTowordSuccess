@@ -32,6 +32,3 @@ struct MovieRowView: View {
     }
 }
 
-#Preview {
-    
-}

@@ -76,6 +76,6 @@ private extension MovieDetailsView {
 
 struct MovieDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailsView(viewModel: MovieDetailsViewModel(movieID: 0))
+        MovieDetailsView(viewModel: MovieDetailsViewModel(movieID: 550))
     }
 }

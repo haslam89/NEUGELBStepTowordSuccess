@@ -12,7 +12,7 @@ struct SplashScreenView: View {
     var body: some View {
         ZStack {
             // Main content
-            MoviesListView(viewModel: MoviesListViewModel(movieService: MovieServiceManager()))
+            MoviesListMainView(viewModel: MoviesListViewModel(movieService: MovieServiceManager()))
                 .opacity(isActive ? 1 : 0)
             
             // Splash screen overlay

@@ -1,12 +1,12 @@
 //
-//  MoviesListView.swift
+//  MoviesListMainView.swift
 //  MovieDB
 //
 //  Created by Hassan Jaffri on 13/11/2025.
 //
 import SwiftUI
 import Combine
-struct MoviesListView: View {
+struct MoviesListMainView: View {
     @StateObject var viewModel: MoviesListViewModel
     @State private var showMovieDetails: Movie? = nil
     @State private var selectedSortOption: MovieSortOption = .releaseDate
@@ -73,7 +73,7 @@ struct MoviesListView: View {
         .onChange(of: viewModel.errorTrigger) { _ in showAlert = true }
     }
 }
-extension MoviesListView {
+extension MoviesListMainView {
     
     private var sortingMenu: some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
@@ -99,7 +99,7 @@ extension MoviesListView {
         }
     }
 }
-extension MoviesListView {
+extension MoviesListMainView {
     @ViewBuilder
     private func SuggestionsDropdown(
         suggestions: [Movie],
@@ -135,7 +135,7 @@ extension MoviesListView {
         viewModel.showSuggetions = false
     }
 }
-extension MoviesListView {
+extension MoviesListMainView {
     
     private func handleSearchChange(_ text: String) {
         Task { await performSearch(for: text) }
@@ -159,5 +159,10 @@ extension MoviesListView {
                 sortedBy: selectedSortOption
             )
         }
+    }
+}
+struct MoviesListMainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MoviesListMainView(viewModel: MoviesListViewModel(movieService: MovieServiceManager()))
     }
 }
